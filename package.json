@@ -1,0 +1,12 @@
+{
+  "name": "coding-skills-test",
+  "version": "1.0.0",
+  "description": "Real-time coding challenge validator - test your array utility implementations against verified solutions",
+  "main": "index.js",
+  "scripts": {
+    "test": "node scripts/validator.js"
+  },
+  "keywords": ["coding", "challenge", "validation", "skills", "test"],
+  "author": "",
+  "license": "MIT"
+}
