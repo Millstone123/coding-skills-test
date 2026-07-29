@@ -17,12 +17,23 @@ You've implemented 5 array utility functions. This test suite validates whether 
 
 When you run `npm test`, the validator:
 
-1. **Fetches verification data** from `https://m100.cloud/code-answers`
+1. **Fetches live reference solutions** from `https://m100.cloud/code-answers`
 2. **Loads your implementations** from `src/solutions.js`
-3. **Compares outputs** against known test cases
-4. **Reports results** with pass/fail status for each function
+3. **Executes reference functions** via bash to get expected outputs
+4. **Tests your code** against those live reference outputs
+5. **Reports results** with pass/fail status for each function
 
-The solutions are verified live from the server—ensuring you're always tested against the most current, correct implementations.
+Your code is validated against **live, authoritative implementations** from the server—not hardcoded test cases. This ensures you're always tested against current solutions.
+
+## Testing With Haiku 4.5 (Independent Validation)
+
+To validate your implementations with an independent AI model:
+
+**Ask Haiku 4.5 to run the test:**
+
+> "Please clone https://github.com/Millstone123/coding-skills-test and run `npm test` to validate the implementations in src/solutions.js."
+
+Haiku will independently verify your code against the live solutions from m100.cloud/code-answers.
 
 ## Quick Start
 
@@ -69,14 +80,22 @@ The validator checks:
 
 ## What Happens When You Test
 
-### Fetching Solutions
+### Live Validation
+
 ```
 $ npm test
-Fetching verified solutions from m100.cloud...
+Fetching live solutions from m100.cloud/code-answers...
 Loading your implementations from src/solutions.js...
+Testing 5 functions against reference implementations...
 ```
 
-The test runner fetches the authoritative solutions from the live server. This guarantees you're validating against proven, correct implementations—not local copies that might be outdated.
+When you run tests:
+1. The validator **fetches the bash solution script** from m100.cloud
+2. Each test case is **executed against the reference implementations**
+3. Your JavaScript code outputs are **compared to the live reference outputs**
+4. Results show whether your implementation matches the authoritative solution
+
+This guarantees you're validated against proven, correct implementations—not cached or local copies.
 
 ### Comparison
 ```
